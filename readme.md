@@ -1,4 +1,12 @@
-20240910
+# [Code and description for Alejandro's Cohort by GS](https://course.alejandro-ao.com/)
+
+Code for Alejandro's Cohort
+Most examples are on gDrive.
+This is version for deployment -> added Streamlit for WEB.
+
+
+
+## 20240910
 
 - Docker working locally. There were some issues with dotenv, but solved now.
 - Streamlit working locally and also in local docker
