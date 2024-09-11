@@ -4,6 +4,19 @@ Code for Alejandro's Cohort
 Most examples are on gDrive.
 This is version for deployment -> added Streamlit for WEB.
 
+#### Deploy to google's Artifact Registry
+
+check if you are in the right project - ai01 in my case -
+
+gcloud projects list
+
+
+1. docker build -t my_streamlit .
+2. docker tag my_streamlit europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
+3. docker push europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
+
+
+
 
 
 ## 20240910
@@ -15,12 +28,4 @@ This is version for deployment -> added Streamlit for WEB.
 \*\* Container Registry is deprecated . . moving to Artifact Registry
 https://cloud.google.com/artifact-registry/docs/transition/transition-from-gcr
 
-## Deploy to google's Artifact Registry
 
-check if you are in the right project - ai01 in my case -
-
-gcloud projects list
-
-1. docker build -t my_streamlit .
-2. docker tag my_streamlit europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
-3. docker push europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
