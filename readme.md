@@ -9,8 +9,10 @@ This is version for deployment -> added Streamlit for WEB.
 check if you are in the right project - ai01 in my case -
 gcloud projects list
 make sure repo exist in specified location on gcloud
+check last line in the docker for the starting file
 
 1. docker build -t cohort_202409 .
+   (2. optional) - to see if the docker works ok: docker run -d -p 8501:8501 cohort_202409
 2. docker tag cohort_202409 europe-west1-docker.pkg.dev/ai01-51d16/cohort/cohort_202409:latest
 3. docker push europe-west1-docker.pkg.dev/ai01-51d16/cohort/cohort_202409:latest
 
