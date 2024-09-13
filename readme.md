@@ -10,14 +10,9 @@ check if you are in the right project - ai01 in my case -
 
 gcloud projects list
 
-
-1. docker build -t my_streamlit .
-2. docker tag my_streamlit europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
+1. docker build -t cohort_202409 .
+2. docker tag cohort_202409 europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/cohort_202409:latest
 3. docker push europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
-
-
-
-
 
 ## 20240910
 
@@ -27,5 +22,3 @@ gcloud projects list
 
 \*\* Container Registry is deprecated . . moving to Artifact Registry
 https://cloud.google.com/artifact-registry/docs/transition/transition-from-gcr
-
-
