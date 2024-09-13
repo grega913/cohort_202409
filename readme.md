@@ -11,8 +11,8 @@ check if you are in the right project - ai01 in my case -
 gcloud projects list
 
 1. docker build -t cohort_202409 .
-2. docker tag cohort_202409 europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/cohort_202409:latest
-3. docker push europe-west1-docker.pkg.dev/ai01-51d16/my-streamlit/my_streamlit:latest
+2. docker tag cohort_202409 europe-west1-docker.pkg.dev/ai01-51d16/cohort/cohort_202409:latest
+3. docker push europe-west1-docker.pkg.dev/ai01-51d16/cohort/cohort_202409:latest
 
 ## 20240910
 
