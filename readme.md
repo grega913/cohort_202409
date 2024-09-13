@@ -7,8 +7,8 @@ This is version for deployment -> added Streamlit for WEB.
 #### Deploy to google's Artifact Registry
 
 check if you are in the right project - ai01 in my case -
-
 gcloud projects list
+make sure repo exist in specified location on gcloud
 
 1. docker build -t cohort_202409 .
 2. docker tag cohort_202409 europe-west1-docker.pkg.dev/ai01-51d16/cohort/cohort_202409:latest

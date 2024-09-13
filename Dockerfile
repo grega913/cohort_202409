@@ -22,7 +22,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 RUN pip3 install -U python-dotenv
 
-#EXPOSE 8501
+EXPOSE 8501
 
 #GCP
 EXPOSE 8080
