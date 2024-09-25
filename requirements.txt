@@ -6,3 +6,4 @@ langsmith
 wikipedia
 streamlit>=1.37.0
 icecream
+requests
