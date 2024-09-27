@@ -142,7 +142,7 @@ def chat_history_final():
 
         response = chain_with_message_history.invoke(
             {"input": user_message},
-        {"configurable": {"session_id": "unused"}},
+            {"configurable": {"session_id": "unused"}},
         )
 
         print("Assistant:", response)
@@ -166,6 +166,64 @@ def chat_history_final():
         demo_ephemeral_chat_history.add_message(summary_message)
 
         print("Summary:", summary_message)
+
+
+
+
+    
+    demo_ephemeral_chat_history = ChatMessageHistory()
+
+    session_id = []
+
+    demo_ephemeral_chat_history.add_user_message(user_message)
+
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system", "You are a helpful assistant. Answer all questions to the best of your ability. The provided chat history includes facts about the user you are speaking with.",
+            ),
+            ("placeholder", "{chat_history}"),
+            ("user", "{input}"),
+        ]
+    )
+
+    chain = prompt | model
+
+    chain_with_message_history = RunnableWithMessageHistory(
+        chain,
+        lambda session_id: demo_ephemeral_chat_history,
+        input_messages_key="input",
+        history_messages_key="chat_history",
+    )
+
+    response = chain_with_message_history.invoke(
+        {"input": user_message},
+    {"configurable": {"session_id": "unused"}},
+    )
+
+    print("Assistant:", response)
+
+    summarization_prompt = ChatPromptTemplate.from_messages(
+        [
+            ("placeholder", "{chat_history}"),
+            (
+                "user","Distill the above chat messages into a single summary message. Include as many specific details as you can.",
+            ),
+        ]
+    )
+
+
+    summarization_chain = summarization_prompt | model
+
+    summary_message = summarization_chain.invoke({"chat_history": demo_ephemeral_chat_history.messages})
+
+    demo_ephemeral_chat_history.clear()
+
+    demo_ephemeral_chat_history.add_message(summary_message)
+
+    print("Summary:", summary_message)
+
+
 
 
 

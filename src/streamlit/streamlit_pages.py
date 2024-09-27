@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Create a Streamlit app
-st.set_page_config(page_title="My App", page_icon=":smile:", layout="wide")
+
 
 # Initialize the state
 if 'my_variable' not in st.session_state:

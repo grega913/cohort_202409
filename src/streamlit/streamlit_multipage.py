@@ -11,11 +11,11 @@ sys.path.append(parent_dir)
 
 from lessons.lesson5 import lesson5topic4, lesson5topic5, lesson5topic5_2
 from lessons.lesson5_project_wiki import wikiToBlog
+from lessons.lesson7 import chat_with_callback
+from lessons.lesson7_project_gui import st_chat_with_generator
 
 
-
-st.set_page_config(page_title="Welcome to Cohort_202409 by GS", page_icon="🌶️")
-
+# st.set_page_config(page_title="Welcome to Cohort_202409 by GS", page_icon="🌶️")
 
 
 
@@ -60,9 +60,9 @@ def mapping_demo():
     st.write(
         """
         This demo shows how to use
-[`st.pydeck_chart`](https://docs.streamlit.io/develop/api-reference/charts/st.pydeck_chart)
-to display geospatial data.
-"""
+        [`st.pydeck_chart`](https://docs.streamlit.io/develop/api-reference/charts/st.pydeck_chart)
+        to display geospatial data.
+        """
     )
 
     @st.cache_data
@@ -263,7 +263,9 @@ page_names_to_funcs = {
     "Plotting Demo": plotting_demo,
     "Mapping Demo": mapping_demo,
     "DataFrame Demo": data_frame_demo,
-    "BlogFromWiki" : blogFromWiki
+    "BlogFromWiki" : blogFromWiki,
+    "Lesson7": chat_with_callback,
+    "Lesson7_GUI": st_chat_with_generator
 }
 
 demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())

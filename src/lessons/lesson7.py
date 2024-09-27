@@ -74,11 +74,9 @@ def chat_with_generator():
 
         st.session_state.messages.append({"role": "ai", "content": response})
 
-
 def session_state_details():
     for key in st.session_state.keys():
         st.write(f"{key},: {st.session_state[key]}")
-
 
 # when we have input widget, we should set up a key param
 # this param is than added to the store, and we can access it from any function
@@ -180,6 +178,7 @@ def chat_with_arguments():
 
 #region Cache
 #https://app.alejandro-ao.com/topics/streamlit-cache/
+
 def test_cache_data():
 
     st.title("Caching")
@@ -224,6 +223,48 @@ def test_cache_resource():
     
 
 
+#lesson7, topic 10 - https://app.alejandro-ao.com/topics/project-your-gui-ai-assistant/
+
+# using st.write_stream
+# https://app.alejandro-ao.com/topics/streaming-chat-in-streamlit/
+# connect with our chat with history from lesson5
+def sl_chat_with_generator():
+
+    if 'messages' not in st.session_state:
+        st.session_state.messages = []
+
+    def generate_response(user_input):
+        response = """
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula tellus quis sapien consequat tempus. Quisque egestas ullamcorper mauris, vel suscipit velit mollis nec. Donec lacinia augue at ex mollis, at congue libero blandit. In in blandit quam, sit amet iaculis dui. Vestibulum dignissim nulla arcu, et pellentesque arcu vulputate in. Morbi dignissim felis rutrum nunc porta consequat. Vivamus vitae odio ligula. Duis molestie libero at lobortis tempor. Quisque feugiat lorem non nunc cursus, eget egestas sapien facilisis. Etiam efficitur malesuada urna quis posuere. Duis iaculis vel enim vel luctus.
+        In hac habitasse platea dictumst. Pellentesque vitae erat vulputate, ornare ligula nec, suscipit elit. Ut vitae nibh at lorem mattis cursus vel quis leo. Morbi mi erat, faucibus vitae sapien eget, pulvinar tempus justo. Aliquam vulputate erat a libero iaculis fringilla. Donec posuere diam lobortis cursus vestibulum. Nullam venenatis est lacus, vitae dictum est faucibus non. Proin ut nunc eget mauris elementum porta. Nulla lobortis enim eget justo vestibulum sagittis. Phasellus vel urna arcu. Duis consequat tincidunt lobortis.
+        """
+
+        for token in response.split(" "):
+            time.sleep(0.1)
+            yield token + " "
+
+    for message in st.session_state.messages:
+        if message["role"] == "user":
+            st.chat_message("user").markdown(message["content"])
+        else:
+            st.chat_message("ai").markdown(message["content"])
+
+    user_input = st.chat_input("Type your message here...")
+
+    if user_input and user_input != "":
+
+        st.chat_message("user").markdown(user_input)
+        st.session_state.messages.append({"role": "user", "content": user_input})
+
+        with st.chat_message("ai"):
+            response_generator = generate_response(user_input)
+            response = st.write_stream(response_generator)
+
+        st.session_state.messages.append({"role": "ai", "content": response})
+
+
+
+
 #endregion
 
 
@@ -238,4 +279,5 @@ if __name__=="__main__":
     # chat_with_callback()
     # chat_with_arguments()
     # test_cache_data()
-    test_cache_resource()
+    # test_cache_resource()
+    sl_chat_with_generator()
