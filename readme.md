@@ -8,13 +8,11 @@
 
 - Assistant:
 
-* making assistant class -> assumimg we are not gonna be using streamlit
-* Assistant class creates a RAG chain
-* message history and employee information are dealt with streamlit session state
-
-- GUI with Streamlit->idea is to pass Assistant as a dependency to Streamlit model
-
-* render methods -> rendering main parts of apps
+** making assistant class -> assumimg we are not gonna be using streamlit
+** Assistant class creates a RAG chain
+** message history and employee information are dealt with streamlit session state
+** GUI with Streamlit->idea is to pass Assistant as a dependency to Streamlit model
+\*\* render methods -> rendering main parts of apps
 
 - run the app with "streamlit run src/lessons/lesson8/l8_onboarding_assistant_Alejandro.py"
 
