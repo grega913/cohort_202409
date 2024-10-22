@@ -1,9 +1,16 @@
 langchain-core
 langchain-community
 langchain-groq
+langchain-chroma
+langchain-openai
 pydantic
 langsmith
 wikipedia
-streamlit>=1.37.0
+streamlit
 icecream
 requests
+python-dotenv
+faker
+faiss-cpu
+
+

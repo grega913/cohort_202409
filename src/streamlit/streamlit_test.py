@@ -15,8 +15,8 @@ parent_dir = os.path.dirname(os.path.dirname(__file__))
 # Add the parent directory to the sys.path
 sys.path.append(parent_dir)
 
-from lessons.lesson5 import lesson5topic4, lesson5topic5, lesson5topic5_2
-from lessons.lesson5_project_wiki import wikiToBlog
+from lessons.l5 import lesson5topic4, lesson5topic5, lesson5topic5_2
+from lessons.l5_project_wiki import wikiToBlog
 
 
 

@@ -1,4 +1,34 @@
-# Added Lesson7
+# Added Lesson 8
+
+## Lesson 8, Topic 6 - 20241002 - https://app.alejandro-ao.com/topics/lab-onboarding-assistant/
+
+1. Exercise: Build an Onboarding Assistant for the Umbrella Corporation - Alejandro's Repo: https://github.com/alejandro-ao/U2qfZneHGMNTNEw
+2. My version is in "lessons/l8_onboarding_assistant_gs.py"
+3. Alejandro's version is in "lessons/l8_onboarding_assistant_alejandro.py" - Lesson8, Topic7: https://app.alejandro-ao.com/topics/rag-lab-solution/
+
+- Assistant:
+
+* making assistant class -> assumimg we are not gonna be using streamlit
+* Assistant class creates a RAG chain
+* message history and employee information are dealt with streamlit session state
+
+- GUI with Streamlit->idea is to pass Assistant as a dependency to Streamlit model
+
+* render methods -> rendering main parts of apps
+
+- run the app with "streamlit run src/lessons/lesson8/l8_onboarding_assistant_Alejandro.py"
+
+# Added Lesson 7
+
+## Lesson 7, Topic 10 - 20240927 - https://app.alejandro-ao.com/topics/project-your-gui-ai-assistant/
+
+1.  Building a GUI AI Assistant with memory with Streamlit
+2.  located at: src\lessons\lesson7_project_gui.py
+3.  main points:
+    - storing messages into st.session_state
+    - creating a function that returns chat_with_message_history, using RunnableWithMessageHistory
+    - decorating the function with @st.cache_resource as ChatHistory is defined within function
+    -
 
 # [Code and description for Alejandro's Cohort by GS](https://course.alejandro-ao.com/)
 
