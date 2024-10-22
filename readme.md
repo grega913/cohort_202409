@@ -6,12 +6,12 @@
 2. My version is in "lessons/l8_onboarding_assistant_gs.py"
 3. Alejandro's version is in "lessons/l8_onboarding_assistant_alejandro.py" - Lesson8, Topic7: https://app.alejandro-ao.com/topics/rag-lab-solution/
 
-3.1 making assistant class -> assumimg we are not gonna be using streamlit
-3.2 Assistant class creates a RAG chain
-3.3 message history and employee information are dealt with streamlit session state
-3.4 GUI with Streamlit->idea is to pass Assistant as a dependency to Streamlit model
-3.5 render methods -> rendering main parts of apps
-3.6 run the app with "streamlit run src/lessons/lesson8/l8_onboarding_assistant_Alejandro.py"
+3.1. making assistant class -> assumimg we are not gonna be using streamlit
+3.2. Assistant class creates a RAG chain
+3.3. message history and employee information are dealt with streamlit session state
+3.4. GUI with Streamlit->idea is to pass Assistant as a dependency to Streamlit model
+3.5. render methods -> rendering main parts of apps
+3.6. run the app with "streamlit run src/lessons/lesson8/l8_onboarding_assistant_Alejandro.py"
 
 # Added Lesson 7
 
