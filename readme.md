@@ -1,3 +1,12 @@
+# added Lesson 9
+
+## install some libraries:
+
+- pip install -Uq "unstructured[all-docs]" pillow lxml
+- pip install -Uq chromadb tiktoken
+- pip install langchain langchain-community langchain_openai langchain_groq
+- pip install -Uq python-dotenv
+
 # Added Lesson 8
 
 ## Lesson 8, Topic 6 - 20241002 - https://app.alejandro-ao.com/topics/lab-onboarding-assistant/

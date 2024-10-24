@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     
 
-    st.set_page_config(page_title="Umbrella Onboarding", page_icon="", layout="wide")
+    st.set_page_config(page_title="Umbrella Onboarding - AJ", page_icon="", layout="wide")
 
 
     #serialized version of results is stored in the cache
