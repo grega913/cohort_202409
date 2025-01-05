@@ -1,4 +1,18 @@
-# added Lesson 9
+# 20250105 - A new year and a lot of suffering here, but I think finally some progress. Multimodalal with Posgtgres working.
+
+# 20241210 - A lot of trials and error to make chroma work. It is not documented, but it need to have persist_direcrory defined.
+
+    vectorstore = Chroma(
+        collection_name="multi_modal_rag",
+        embedding_function=OpenAIEmbeddings(),
+        persist_directory=chromaPath
+    )
+
+I could not import documents when there was no persistence_directory in init - One WEEK?????
+
+# added Lesson 9 - MultiModal RAG - 20241108 - https://app.alejandro-ao.com/lessons/multimodal-rag/
+
+## ETL - Extract, Transform, Load
 
 ## install some libraries:
 
@@ -7,7 +21,9 @@
 - pip install langchain langchain-community langchain_openai langchain_groq
 - pip install -Uq python-dotenv
 
-# Added Lesson 8
+### Using Unstructured . . . Partition_pdf - extracting every single elements from pdf
+
+# Added Lesson 8 - RAG
 
 ## Lesson 8, Topic 6 - 20241002 - https://app.alejandro-ao.com/topics/lab-onboarding-assistant/
 

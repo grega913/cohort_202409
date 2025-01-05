@@ -1,6 +1,8 @@
 
 #https://github.com/alejandro-ao/U2qfZneHGMNTNEw/tree/solution
 
+# how to run
+# streamlit run src/lessons/lesson8/l8_onboarding_assistant_alejandro.py
 
 
 # from data.employees import generate_employee_data

@@ -12,5 +12,9 @@ requests
 python-dotenv
 faker
 faiss-cpu
-
+sqlalchemy
+langchain_postgres==0.0.12
+psycopg_binary
+asyncio
+pickle-mixin
 

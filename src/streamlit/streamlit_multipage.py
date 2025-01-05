@@ -1,3 +1,6 @@
+
+
+
 import streamlit as st
 import os
 import sys
@@ -9,10 +12,10 @@ parent_dir = os.path.dirname(os.path.dirname(__file__))
 # Add the parent directory to the sys.path
 sys.path.append(parent_dir)
 
-from lessons.l5 import lesson5topic4, lesson5topic5, lesson5topic5_2
-from lessons.l5_project_wiki import wikiToBlog
-from lessons.l7 import chat_with_callback
-from lessons.l7_project_gui import st_chat_with_generator
+from lessons.lesson5.l5 import lesson5topic4, lesson5topic5, lesson5topic5_2
+from lessons.lesson5.l5_project_wiki import wikiToBlog
+from lessons.lesson7.l7 import chat_with_callback
+from lessons.lesson7.l7_project_gui import st_chat_with_generator
 
 
 # st.set_page_config(page_title="Welcome to Cohort_202409 by GS", page_icon="🌶️")
